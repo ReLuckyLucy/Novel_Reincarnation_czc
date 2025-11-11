@@ -1,0 +1,64 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy to Vercel
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for lockfile
+        id: check_lock
+        run: |
+          if [ -f package-lock.json ] || [ -f yarn.lock ] || [ -f npm-shrinkwrap.json ]; then
+            echo "has_lock=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_lock=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Node.js (with npm cache)
+        if: steps.check_lock.outputs.has_lock == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Setup Node.js (no cache)
+        if: steps.check_lock.outputs.has_lock == 'false'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: |
+          if [ "${{ steps.check_lock.outputs.has_lock }}" = 'true' ]; then
+            echo 'Lockfile found — using npm ci';
+            npm ci --no-audit --no-fund;
+          else
+            echo 'No lockfile found — falling back to npm install';
+            npm install --no-audit --no-fund;
+          fi
+
+      - name: Build site (VitePress)
+        run: npm run docs:build
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Deploy to Vercel (prebuilt static)
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "${VERCEL_TOKEN}" ]; then
+            echo "VERCEL_TOKEN secret is not set. Add it in Settings -> Secrets -> Actions.";
+            exit 1;
+          fi
+          # Deploy the already-built static folder. --confirm skips interactive prompts.
+          vercel --prod .vitepress/dist --token=${VERCEL_TOKEN} --confirm
