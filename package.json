@@ -1,54 +1,55 @@
 {
-  "name": "na-dev-manual",
-  "version": "0.1.0",
-  "description": "《转生成为陈之葱然后寻花问柳》",
-  "license": "GPL-3.0-only",
-  "author": {
-    "name": "Seele.Clover",
-    "email": "37256067+seeleclover@users.noreply.github.com",
-    "url": "https://github.com/seeleclover"
-  },
-  "homepage": "https://github.com/gdmuna/na-dev-manual",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gdmuna/na-dev-manual.git"
-  },
-  "engines": {
-    "node": "^22.0.0"
-  },
-  "type": "module",
-  "scripts": {
-    "docs:dev": "vitepress dev u",
-    "docs:build": "vitepress build u",
-    "docs:preview": "vitepress preview u",
-    "eslint": "eslint . --fix",
-    "prettier": "prettier . --write",
-    "prepare": "husky install",
-    "lint:lint-staged": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,cjs,mjs,jsx,ts,tsx,html,vue}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{css,scss,less,styl}": [
-      "prettier --write"
-    ],
-    "*.{json,yml,yaml}": [
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
-    ]
-  },
-  "devDependencies": {
-    "eslint": "^9.35.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
-    "globals": "^16.4.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.6",
-    "prettier": "3.6.2",
-    "vitepress": "2.0.0-alpha.12"
-  }
+    "name": "na-dev-manual",
+    "version": "0.1.0",
+    "description": "《转生成为陈之葱然后寻花问柳》",
+    "license": "GPL-3.0-only",
+    "author": {
+        "name": "Seele.Clover",
+        "email": "37256067+seeleclover@users.noreply.github.com",
+        "url": "https://github.com/seeleclover"
+    },
+    "homepage": "https://github.com/gdmuna/na-dev-manual",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gdmuna/na-dev-manual.git"
+    },
+    "engines": {
+        "node": "^22.0.0"
+    },
+    "type": "module",
+    "scripts": {
+        "docs:dev": "vitepress dev",
+        "docs:build": "vitepress build",
+        "docs:preview": "vitepress preview",
+        "vercel-build": "npm run docs:build",
+        "eslint": "eslint . --fix",
+        "prettier": "prettier . --write",
+        "prepare": "husky install",
+        "lint:lint-staged": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,cjs,mjs,jsx,ts,tsx,html,vue}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{css,scss,less,styl}": [
+            "prettier --write"
+        ],
+        "*.{json,yml,yaml}": [
+            "prettier --write"
+        ],
+        "*.md": [
+            "prettier --write"
+        ]
+    },
+    "devDependencies": {
+        "eslint": "^9.35.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.4",
+        "globals": "^16.4.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.6",
+        "prettier": "3.6.2",
+        "vitepress": "2.0.0-alpha.12"
+    }
 }

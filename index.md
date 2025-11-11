@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-    name: '《转生成为陈之葱然后寻花问柳》'
+    name: '转生成为陈之葱然后寻花问柳'
     text: 'Reincarnation_czc'
-    tagline: ReLucy著.
+    tagline: ReLucy
     actions:
         - theme: brand
           text: 点击阅读
