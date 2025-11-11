@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         # Use `npm install` because `npm ci` requires a lockfile (package-lock.json / yarn.lock).
-        # For reproducible installs it's recommended to generate and commit package-lock.json.
+        # For reproducible installs it's recommended to generate and commit package-lock.json .
         run: npm install --no-audit --no-fund
 
       - name: Build project
