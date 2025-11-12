@@ -35,8 +35,8 @@ export default defineConfig({
                     text: '第一卷·重启·往昔的痕迹',
                     items: [
                         { text: '第一章·我转生成为了陈之葱？', link: '/novel/first_part/first_part_1.md' },
-                        { text: '第二章·篮球场上的英姿', link: '/novel/first_part/first_part_2.md' },
-                        { text: '第三章·', link: '' }
+                        { text: '第二章·篮球的英姿，暗香的短袖', link: '/novel/first_part/first_part_2.md' },
+                        { text: '第三章·湖夜告白', link: '/novel/first_part/first_part_2.md' }
                     ]
                 },
                 {
