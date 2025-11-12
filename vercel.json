@@ -1,6 +1,6 @@
 {
     "buildCommand": "npm run docs:build",
-    "outputDirectory": "u/.vitepress/dist",
+    "outputDirectory": ".vitepress/dist",
     "installCommand": "npm install",
     "framework": "vitepress",
     "cleanUrls": true,
