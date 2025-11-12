@@ -1,0 +1,15 @@
+.git
+.gitignore
+README.md
+.env.local
+.env.*.local
+node_modules
+.next
+out
+build
+dist
+.vercel
+*.log
+.DS_Store
+.vscode
+.idea
