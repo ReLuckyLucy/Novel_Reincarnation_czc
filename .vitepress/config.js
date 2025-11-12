@@ -36,7 +36,7 @@ export default defineConfig({
                     items: [
                         { text: '第一章·我转生成为了陈之葱？', link: '/novel/first_part/first_part_1.md' },
                         { text: '第二章·篮球的英姿，暗香的短袖', link: '/novel/first_part/first_part_2.md' },
-                        { text: '第三章·湖夜告白', link: '/novel/first_part/first_part_2.md' }
+                        { text: '第三章·湖夜告白', link: '/novel/first_part/first_part_3.md' }
                     ]
                 },
                 {
