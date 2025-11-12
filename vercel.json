@@ -4,6 +4,7 @@
     "installCommand": "npm install",
     "framework": "vitepress",
     "cleanUrls": true,
+    "public": false,
     "headers": [
         {
             "source": "/assets/(.*)",
