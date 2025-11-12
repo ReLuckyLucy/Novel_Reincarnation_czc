@@ -149,3 +149,5 @@ pnpm-lock.yaml
 # VitePress
 .vitepress/dist
 .vitepress/cache
+
+.vercel
