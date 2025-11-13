@@ -68,7 +68,7 @@ export default defineConfig({
                 {
                     text: '声明',
                     items: [
-                        { text: '第X章·', link: '' },
+                        { text: '免责声明·', link: '/statement/Disclaimer.md' },
                         { text: '第XX章·', link: '' }
                     ]
                 }
