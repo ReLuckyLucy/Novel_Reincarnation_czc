@@ -26,7 +26,7 @@ export default defineConfig({
         nav: [
             { text: '主页', link: '/' },
             { text: '小说主体', link: '/novel/first_part/first_part_1.md' },
-            { text: '声明', link: '/statement/' }
+            { text: '声明', link: '/statement/Disclaimer.md' }
         ],
         // Sidebar: add an entry for /novel/ so pages under /novel/* show the site sidebar.
         sidebar: {
