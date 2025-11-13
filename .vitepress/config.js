@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     lang: 'zh-CN',
-    title: '转生成为陈之葱然后寻花问柳',
+    title: '转生成为陈葱然后寻花问柳',
     description: 'Reincarnation_czc.',
     head: [['link', { rel: 'icon', href: '/logo.svg' }]],
     // Use root base for Vercel or a custom domain. If you publish to GitHub Pages project site,
@@ -34,7 +34,7 @@ export default defineConfig({
                 {
                     text: '第一卷·重启·往昔的痕迹',
                     items: [
-                        { text: '第一章·我转生成为了陈之葱？', link: '/novel/first_part/first_part_1.md' },
+                        { text: '第一章·我转生成为了陈葱？', link: '/novel/first_part/first_part_1.md' },
                         { text: '第二章·篮球的英姿，暗香的短袖', link: '/novel/first_part/first_part_2.md' },
                         { text: '第三章·湖夜告白', link: '/novel/first_part/first_part_3.md' }
                     ]
